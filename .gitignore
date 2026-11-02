@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Compiled C++ Executables & Binaries
+*.exe
+*.o
+*.out
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+
+# OS & Editor
+.DS_Store
+Thumbs.db

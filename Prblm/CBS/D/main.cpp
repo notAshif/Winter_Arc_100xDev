@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define sz(x) (int)(x).size()
+#define pb push_back
+#define F first
+#define S second
+#define nl '\n'
+
+const int MOD = 1e9 + 7;
+const int INF = 1e9;
+
+#ifdef LOCAL
+#define dbg(x) cerr << #x << " = " << (x) << nl
+#else
+#define dbg(x)
+#endif
+
+bool cmp(int a, int b)
+{
+    int lastDa = abs(a % 10);
+    int lastDb = abs(b % 10);
+
+    if (lastDa != lastDb)
+    {
+        return lastDa < lastDb;
+    }
+    return a < b;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+
+    sort(a, a + n, cmp);
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+    return 0;
+}
